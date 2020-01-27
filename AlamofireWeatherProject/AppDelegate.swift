@@ -14,7 +14,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        let forcastService = ForcastServices(APIKey: "d15014f9492940ec6aa9d5beeabdf0d7")
+        
+        forcastService.getCurrentWeather(latitude: 37.8267, longitude: -122.4233)
+        
         return true
     }
 
